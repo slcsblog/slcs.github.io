@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!-- <title>3_1_phaser-catch-the-cat.html</title> -->
+<title>Catch The Cat</title>
+
+<meta http-equiv="keywords" content="404页面">
+<meta http-equiv="description" content="自定义404页面">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
+<style>
+* {
+	padding: 0;
+	margin: 0
+}
+
+body {
+	background-color: #eeeeee;
+}
+/* 游戏画布样式  */
+#catch-the-cat {
+	width: 100%;
+	margin-top: 32px;
+	text-align: center;
+}
+
+#info,#returnHome {
+	text-align: center;
+	/* border: solid 1px grey; */
+	margin-top: 10px;
+}
+
+#info p{
+	font-size: 25px;
+}
+
+
+#returnHome a {
+	text-decoration: none;
+	color: #5bace2;
+	font-size: 25px;
+	line-height: 30px;
+}
+
+#returnHome a:HOVER {
+	text-decoration: underline;
+	color: #0099FF;
+}
+
+</style>
+</head>
+<body>
+	<!-- 1.404页面提示信息 -->
+	<div id="info">
+		<p>Catch The Cat Game</p>
+	</div>
+
+	<!-- 2.游戏画布 -->
+	<!-- 首先引入游戏框架,详情可了解：http://phaser.io-->
+	<script src="./js/phaser.min.js"></script>
+	<!-- 然后引入游戏代码 -->
+	<script src="./js/catch-the-cat.js"></script>
+	<div id="catch-the-cat"></div>
+	<script>
+		window.game = new CatchTheCatGame({
+			w : 11,
+			h : 11,
+			r : 20,
+			backgroundColor : 0xffffff,
+			parent : 'catch-the-cat',
+			statusBarAlign : 'center',
+			credit : 'Catch The Cat Game'/* 该属性可以设置画布右下角的角标 */
+		});
+	</script>
+
+</body>
+</html>
